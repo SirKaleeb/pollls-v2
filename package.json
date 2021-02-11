@@ -8,8 +8,17 @@
     "start": "next start"
   },
   "dependencies": {
+    "@prisma/client": "^2.16.1",
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
     "next": "10.0.6",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-query": "^3.8.3"
+  },
+  "devDependencies": {
+    "@prisma/cli": "^2.16.1",
+    "autoprefixer": "^10.2.4",
+    "tailwindcss": "^2.0.3"
   }
 }

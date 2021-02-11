@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Member {
+  id        Int     @id @default(autoincrement())
+  username  String  @unique
+  firstName String?
+  lastName  String?
+  email     String  @unique
+  bio       String?
+  polls     String
+  isBanned  Boolean @default(false)
+  isStaff   Boolean @default(false)
+}
+
+model Poll {
+  id       Int     @id @default(autoincrement())
+  title    String
+  subtitle String?
+  authorId Int
+  private  Boolean @default(false)
+  featured Boolean @default(false)
+}
